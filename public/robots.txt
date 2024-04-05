@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/  # Block access to admin directory
+Disallow: /login/  # Block access to login directory (optional)
+Allow: /  # Allow crawling of all other directories
+
+Sitemap: https://www.yourwebsite.com/sitemap.xml  # Optional: Provide sitemap location
