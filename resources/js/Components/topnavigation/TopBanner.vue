@@ -22,8 +22,8 @@ function removeBanner() {
               <MegaphoneIcon class="h-6 w-6 text-white" aria-hidden="true" />
             </span>
             <p class="ml-3 truncate font-medium text-white">
-              <span class="md:hidden">We announced a new product!</span>
-              <span class="hidden md:inline">In UI designing phase, not a working product.</span>
+              <!-- <span class="md:hidden">We announced a new product!</span> -->
+              <span class="">In UI designing phase, not a working website.</span>
             </p>
           </div>
           <div class="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">

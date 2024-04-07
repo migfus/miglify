@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
 import { AtSymbolIcon, CodeBracketIcon, LinkIcon } from '@heroicons/vue/20/solid'
 import CreatePostModal from './CreatePostModal.vue'
+import AppButton from '@/Components/form/AppButton.vue'
 
 const open = ref(false)
 </script>
@@ -10,7 +11,7 @@ const open = ref(false)
 
 
 <template>
-  <form action="#" class="bg-brand-50 p-6 rounded-xl shadow mb-4">
+  <div class="bg-brand-50 p-6 rounded-xl shadow mb-4">
     <TabGroup v-slot="{ selectedIndex }">
       <TabList class="flex items-center">
         <Tab as="template" v-slot="{ selected }">
@@ -42,8 +43,8 @@ const open = ref(false)
       <TabPanels class="mt-2">
         <TabPanel class="-m-0.5 rounded-lg p-0.5">
           <label for="post" class="sr-only">Post</label>
-          <div>
-            <textarea @click="open = true" rows="2" name="post" id="post" class="block w-full rounded-xl border-brand-300 shadow-sm focus:border-brand-500 focus:ring-brand-500 sm:text-sm" placeholder="Write a new post..." />
+          <div class="flex flex-col">
+            <AppButton @click="open = true" type="button" alignment="l" class="text-left h-14">Write a post...</AppButton>
           </div>
         </TabPanel>
       </TabPanels>
@@ -53,7 +54,7 @@ const open = ref(false)
         Post
       </AppButton>
     </div> -->
-  </form>
+  </div>
 
   <CreatePostModal v-model="open"/>
 </template>

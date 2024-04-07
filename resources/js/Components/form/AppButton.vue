@@ -3,7 +3,8 @@ import { FunctionalComponent, computed } from 'vue'
 const $props = defineProps<{
   icon?: FunctionalComponent
   color?: string
-  type?: 'button' | 'submit' | 'reset'
+  type?: 'button' | 'submit' | 'reset',
+  alignment?: 'l' | 'c' | 'r'
 }>()
 
 const buttonColor = computed(() => {
@@ -26,6 +27,15 @@ const iconColor = computed(() => {
     return 'text-brand-50'
   }
 })
+
+const textAlignment = computed(() => {
+  if(!$props.alignment) {
+    return 'justify-center'
+  }
+  else if($props.alignment == 'l') {
+    return 'justify-left'
+  }
+})
 </script>
 
 <template>
@@ -33,7 +43,8 @@ const iconColor = computed(() => {
     :type
     :class="[
       buttonColor,
-      'inline-flex justify-center rounded-md px-4 py-2 text-sm font-medium shadow focus:outline-none focus:ring-2 focus:ring-offset-2'
+      textAlignment,
+      'inline-flex rounded-md px-4 py-2 text-sm font-medium shadow focus:outline-none focus:ring-2 focus:ring-offset-2'
     ]"
   >
     <component v-if="icon" :is="icon" :class="['-ml-1 mr-2 h-5 w-5', iconColor]" aria-hidden="true" />

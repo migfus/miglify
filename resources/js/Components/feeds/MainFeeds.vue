@@ -5,7 +5,7 @@ import DataTransition from '@/Components/transitions/DataTransition.vue';
 
 const posts = [
   {
-    title: 'Boost your conversion rate',
+    id: 1,
     href: '#',
     category: { name: 'Article', href: '#' },
     description:
@@ -27,7 +27,7 @@ const posts = [
     }
   },
   {
-    title: 'How to use search engine optimization to drive sales',
+    id: 2,
     href: '#',
     category: { name: 'Video', href: '#' },
     description:
@@ -49,7 +49,7 @@ const posts = [
     }
   },
   {
-    title: 'Improve your customer experience',
+    id: 3,
     href: '#',
     category: { name: 'Case Study', href: '#' },
     description:
@@ -71,7 +71,7 @@ const posts = [
     }
   },
   {
-    title: 'Boost your conversion rate',
+    id: 4,
     href: '#',
     category: { name: 'Article', href: '#' },
     description:
@@ -93,7 +93,7 @@ const posts = [
     }
   },
   {
-    title: 'How to use search engine optimization to drive sales',
+    id: 5,
     href: '#',
     category: { name: 'Video', href: '#' },
     description:
@@ -115,7 +115,7 @@ const posts = [
     }
   },
   {
-    title: 'Improve your customer experience',
+    id: 6,
     href: '#',
     category: { name: 'Case Study', href: '#' },
     description:
@@ -148,20 +148,20 @@ function randomGenerator() {
     <div class="relative">
       <div class="mx-auto grid gap-4">
         <DataTransition>
-          <div v-for="post in posts" :key="post.title" class="flex flex-col overflow-hidden sm:rounded-xl shadow">
+          <div v-for="post in posts" :key="post.id" class="flex flex-col overflow-hidden sm:rounded-xl shadow">
             <div class="flex flex-1 flex-col justify-between bg-brand-50 p-6">
               <div class="mt-2 flex items-center">
                 <div class="flex-shrink-0">
                   <Link :href="post.author.href">
                     <span class="sr-only">{{ post.author.name }}</span>
-                    <img class="h-10 w-10 rounded-full" :src="post.author.imageUrl" alt="" />
+                    <img class="h-8 w-8 rounded-full" :src="post.author.imageUrl" alt="" />
                   </Link>
                 </div>
                 <div class="ml-3">
                   <p class="text-sm font-medium text-gray-900">
-                    <a :href="post.author.href" class="hover:underline">{{ post.author.name }}</a>
+                    <a :href="post.author.href" class="hover:underline text-sm">{{ post.author.name }}</a>
                   </p>
-                  <div class="flex space-x-1 text-sm text-brand-500">
+                  <div class="flex space-x-1 font-medium text-sm text-brand-500">
                     <time :datetime="post.datetime">{{ post.date }}</time>
                     <span aria-hidden="true">&middot;</span>
                     <span>{{ post.readingTime }} read</span>
@@ -171,8 +171,7 @@ function randomGenerator() {
 
               <div class="flex-1">
                 <a :href="post.href" class="mt-2 block">
-                  <p class="text-xl font-semibold text-brand-900">{{ post.title }}</p>
-                  <p class="mt-3 text-base text-brand-500">{{ post.description }}</p>
+                  <p class="mt-3 text-md font-medium text-brand-800 line-clamp-2">{{ post.description }}</p>
                 </a>
               </div>
 

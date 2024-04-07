@@ -3,6 +3,7 @@
 import { ref } from 'vue'
 import { Carousel, Slide, } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
+import moment from 'moment'
 
 const settings = ref({
   itemsToShow: 1,
@@ -10,28 +11,32 @@ const settings = ref({
 })
 
 const breakpoints = ref({
-  300: {
-    itemsToShow: 1.5,
+  365: {
+    itemsToShow: 2,
     snapAlign: 'center'
   },
-  500: {
-    itemsToShow: 2,
+  400: {
+    itemsToShow: 2.2,
+    snapAlign: 'center'
+  },
+  545: {
+    itemsToShow: 3,
     snapAlignt: 'center'
   },
-  700: {
-    itemsToShow: 3,
+  733: {
+    itemsToShow: 3.5,
     snapAlignt: 'center'
   },
   800: {
     itemsToShow: 4,
     snapAlign: 'center',
   },
-  1040: {
-    itemsToShow: 5,
+  1024: {
+    itemsToShow: 5.5,
     snapAlign: 'start',
   },
-  1200: {
-    itemsToShow: 6,
+  1300: {
+    itemsToShow: 7,
     snapAlign: 'start',
   },
 })
@@ -141,16 +146,16 @@ const posts = [
 
 <template>
   <!-- @ts-ignore -->
-  <Carousel v-bind="settings" :breakpoints="breakpoints" class="mt-4 shadow-carousel rounded-xl">
+  <Carousel v-bind="settings" :breakpoints="breakpoints" class="mt-4 shadow-carousel rounded-xl mb-4">
     <Slide
       v-for="post in posts"
       :key="post.title"
       :class="['flex flex-col mr-4',]"
     >
-      <div class="flex flex-1 flex-col justify-between bg-brand-800 p-6 rounded-xl shadow">
+      <div class="flex flex-1 flex-col justify-between bg-brand-800 p-6 rounded-xl shadow w-48">
         <div class="flex-1">
           <a :href="post.href" class="mt-2 block">
-            <p class="text-md text-brand-100">{{ post.title }}</p>
+            <p class="text-sm text-brand-100 font-md">{{ post.title }}</p>
           </a>
         </div>
         <div class="mt-6 flex items-center">
@@ -164,8 +169,8 @@ const posts = [
             <p class="text-xs font-medium text-brand-200">
               <a :href="post.author.href" class="hover:underline">{{ post.author.name }}</a>
             </p>
-            <div class="flex space-x-1 text-sm text-brand-100">
-              <time>{{ post.date }}</time>
+            <div class="flex space-x-1 text-xs font-light text-brand-100">
+              <time>{{ moment(post.date).from(undefined) }}</time>
             </div>
           </div>
         </div>

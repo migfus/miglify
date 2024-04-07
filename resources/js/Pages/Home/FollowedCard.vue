@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import DataTransition from '@/Components/transitions/DataTransition.vue'
 import AppButton from '@/Components/form/AppButton.vue'
-import { PlusIcon, Squares2X2Icon } from '@heroicons/vue/24/outline'
+import { PlusIcon, UsersIcon } from '@heroicons/vue/24/outline'
 
 const activityItems = [
   {
@@ -40,7 +40,7 @@ const activityItems = [
 <template>
   <div class="bg-brand-50 sm:rounded-xl p-6 shadow h-fit">
     <label class="text-brand-900 pb-4 items-center">
-      <Squares2X2Icon class="h-4 w-4 inline mr-1 text-center" aria-hidden="true" />
+      <UsersIcon class="h-4 w-4 inline mr-1" aria-hidden="true" />
       Followed User
     </label>
 
