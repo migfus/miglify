@@ -1,6 +1,8 @@
 
 <script setup lang="ts">
-import DataTransition from '@/Components/transitions/DataTransition.vue';
+import DataTransition from '@/Components/transitions/DataTransition.vue'
+import AppButton from '@/Components/form/AppButton.vue'
+import { PlusIcon } from '@heroicons/vue/24/outline'
 
 const people = [
   {
@@ -39,6 +41,10 @@ const activityItems = [
             </div>
           </div>
         </li>
+
+        <div class="flex flex-col">
+          <AppButton :icon="PlusIcon">More</AppButton>
+        </div>
       </DataTransition>
 
     </ul>

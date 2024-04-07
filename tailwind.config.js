@@ -15,7 +15,7 @@ export default {
         sans: ['Nunito', ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
-        'carousel': '25px 0px 20px -20px rgba(0,0,0,0.1) inset, -25px 0px 20px -20px rgba(0,0,0,0.1) inset',
+        'carousel': '25px 0px 20px -20px rgba(255,255,255,0.1) inset, -25px 0px 20px -20px rgba(0,0,0,0.1) inset',
       },
       colors: {
         brand: {

@@ -20,16 +20,16 @@ import { UserIcon, ArrowRightStartOnRectangleIcon, Cog6ToothIcon } from '@heroic
           </Link>
         </MenuItem>
         <MenuItem v-slot="{ active }">
-          <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+          <Link href="/account" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
             <Cog6ToothIcon class="text-gray-500h-5 w-4 flex-shrink-0 sm:-ml-1 mr-2 inline" />
-            Settings
-          </a>
+            Account Settings
+          </Link>
         </MenuItem>
         <MenuItem v-slot="{ active }">
-          <a href="#" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+          <Link href="/logout" method="post" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
             <ArrowRightStartOnRectangleIcon class="text-gray-500h-5 w-4 flex-shrink-0 sm:-ml-1 mr-2 inline" />
             Sign out
-          </a>
+          </Link>
         </MenuItem>
       </MenuItems>
     </transition>
