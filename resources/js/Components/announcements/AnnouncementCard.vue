@@ -1,8 +1,8 @@
 
 <script setup lang="ts">
-import DataTransition from '@/Components/transitions/DataTransition.vue'
 import AppButton from '@/Components/form/AppButton.vue'
 import { PlusIcon, MegaphoneIcon } from '@heroicons/vue/24/outline'
+import DataTransition from '../transitions/DataTransition.vue'
 
 const people = [
   {
@@ -41,11 +41,11 @@ const announcements = [
             </div>
           </div>
         </li>
-
-        <div class="flex flex-col">
-          <AppButton :icon="PlusIcon">More</AppButton>
-        </div>
       </DataTransition>
+
+      <div class="flex flex-col">
+        <AppButton :icon="PlusIcon">More</AppButton>
+      </div>
 
     </ul>
   </div>

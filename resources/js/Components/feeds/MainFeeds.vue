@@ -175,14 +175,11 @@ function randomGenerator() {
                 </a>
               </div>
 
-
               <PostToggles :counts="post.toggles"/>
               <SummaryCommentSection />
-
             </div>
           </div>
         </DataTransition>
-
       </div>
     </div>
   </div>

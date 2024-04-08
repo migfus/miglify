@@ -9,11 +9,11 @@ use Inertia\Response;
 class PageController extends Controller
 {
   public function index() : Response {
-    return Inertia::render('Home/(Index)');
+    return Inertia::render('Home/HomePage');
   }
 
   public function profile() : Response {
-    return Inertia::render('Profile/(Index)');
+    return Inertia::render('Profile/IndexPage');
   }
 
   /**

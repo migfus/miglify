@@ -54,8 +54,9 @@ const open = ref(false)
         Post
       </AppButton>
     </div> -->
+
+    <CreatePostModal v-model="open"/>
   </div>
 
-  <CreatePostModal v-model="open"/>
 </template>
 

@@ -16,10 +16,7 @@ useTitle('Home | Miglify')
   <div class="font-bold max-w-7xl mx-auto">
     <TopCarousel></TopCarousel>
 
-    <content class="grid gap-4 mb-4 grid-cols-1 md:grid-cols-4">
-      <!-- <div class="md:hidden">
-        <PopularCard/>
-      </div> -->
+    <div class="grid gap-4 mb-4 grid-cols-1 md:grid-cols-4">
       <div class="col-span-3">
         <CreatePost class="mb-4"/>
         <MainFeeds />
@@ -30,7 +27,7 @@ useTitle('Home | Miglify')
         <GroupCard />
         <FollowedCard />
       </div>
-    </content>
+    </div>
 
   </div>
 </template>

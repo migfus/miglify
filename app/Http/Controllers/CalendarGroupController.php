@@ -9,6 +9,6 @@ use Inertia\Response;
 class CalendarGroupController extends Controller
 {
   public function index() : Response {
-    return Inertia::render('Group/(Index)');
+    return Inertia::render('Group/IndexPage');
   }
 }

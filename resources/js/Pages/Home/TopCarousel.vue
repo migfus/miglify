@@ -49,7 +49,7 @@ const posts = [
   {
     title: 'Plus',
     href: '#',
-    date: 'Post Timeline',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Roel Aufderehar',
       href: '#',
@@ -60,7 +60,7 @@ const posts = [
   {
     title: 'How to use search engine optimization to drive sales',
     href: '#',
-    date: 'Mar 10, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Brenna Goyette',
       href: '#',
@@ -71,7 +71,7 @@ const posts = [
   {
     title: 'Improve your customer experience',
     href: '#',
-    date: 'Feb 12, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Daniela Metz',
       href: '#',
@@ -82,7 +82,7 @@ const posts = [
   {
     title: 'How to introducte yourself to be a daily bread in life. Lorem Ipsum the lorem is the ipsum how to be a po is the lorem ipsum',
     href: '#',
-    date: 'Mar 16, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Roel Aufderehar',
       href: '#',
@@ -93,7 +93,7 @@ const posts = [
   {
     title: 'How to use search engine optimization to drive sales',
     href: '#',
-    date: 'Mar 10, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Brenna Goyette',
       href: '#',
@@ -104,7 +104,7 @@ const posts = [
   {
     title: 'Improve your customer experience',
     href: '#',
-    date: 'Feb 12, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Daniela Metz',
       href: '#',
@@ -115,7 +115,7 @@ const posts = [
   {
     title: 'How to introducte yourself to be a daily bread in life. Lorem Ipsum the lorem is the ipsum how to be a po is the lorem ipsum',
     href: '#',
-    date: 'Mar 16, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Roel Aufderehar',
       href: '#',
@@ -126,7 +126,7 @@ const posts = [
   {
     title: 'How to use search engine optimization to drive sales',
     href: '#',
-    date: 'Mar 10, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Brenna Goyette',
       href: '#',
@@ -137,7 +137,7 @@ const posts = [
   {
     title: 'Improve your customer experience',
     href: '#',
-    date: 'Feb 12, 2020',
+    date: 'Thu Oct 25 2018 17:30:03 GMT+0800',
     author: {
       name: 'Daniela Metz',
       href: '#',
@@ -174,7 +174,7 @@ const posts = [
               <a :href="post.author.href" class="hover:underline">{{ post.author.name }}</a>
             </p>
             <div class="flex space-x-1 text-xs font-light text-brand-100">
-              <time>{{ moment(post.date).from(undefined) }}</time>
+              <time>{{ moment(new Date()).fromNow() }}</time>
 
             </div>
           </div>

@@ -44,11 +44,10 @@ const activityItems = [
             </div>
           </div>
         </li>
-
-        <div class="flex flex-col">
-          <AppButton :icon="PlusIcon">More</AppButton>
-        </div>
       </DataTransition>
+      <div class="flex flex-col">
+        <AppButton :icon="PlusIcon">More</AppButton>
+      </div>
 
     </ul>
   </div>

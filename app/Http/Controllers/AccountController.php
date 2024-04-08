@@ -9,6 +9,6 @@ use Inertia\Response;
 class AccountController extends Controller
 {
   public function index() : Response {
-    return Inertia::render('Account/(Index)');
+    return Inertia::render('Account/IndexPage');
   }
 }

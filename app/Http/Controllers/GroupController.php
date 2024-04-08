@@ -9,6 +9,6 @@ use Inertia\Inertia;
 class GroupController extends Controller
 {
   public function index() : Response {
-    return Inertia::render('Group/(Index)');
+    return Inertia::render('Group/IndexPage');
   }
 }
