@@ -11,6 +11,10 @@ const settings = ref({
 })
 
 const breakpoints = ref({
+  200: {
+    itemsToShow: 1,
+    snapAlign: 'center'
+  },
   365: {
     itemsToShow: 2,
     snapAlign: 'center'
@@ -171,6 +175,7 @@ const posts = [
             </p>
             <div class="flex space-x-1 text-xs font-light text-brand-100">
               <time>{{ moment(post.date).from(undefined) }}</time>
+
             </div>
           </div>
         </div>

@@ -4,16 +4,16 @@ import { defineComponent, h } from 'vue'
 const navigation = {
   main: [
     { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Accessibility', href: '#' },
-    { name: 'Partners', href: '#' },
+    // { name: 'Blog', href: '#' },
+    // { name: 'Jobs', href: '#' },
+    // { name: 'Press', href: '#' },
+    // { name: 'Accessibility', href: '#' },
+    // { name: 'Partners', href: '#' },
   ],
   social: [
     {
       name: 'Facebook',
-      href: '#',
+      href: 'https://www.facebook.com/migfus20',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -27,7 +27,7 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: 'https://www.instagram.com/migfus20/',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -53,7 +53,7 @@ const navigation = {
     },
     {
       name: 'GitHub',
-      href: '#',
+      href: 'https://github.com/migfus',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -67,7 +67,7 @@ const navigation = {
     },
     {
       name: 'YouTube',
-      href: '#',
+      href: 'https://www.youtube.com/channel/UCGlgOXm1I0bz_QF1nGpkRyQ',
       icon: defineComponent({
         render: () =>
           h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
@@ -93,12 +93,12 @@ const navigation = {
         </div>
       </nav>
       <div class="mt-10 flex justify-center space-x-10">
-        <a v-for="item in navigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">
+        <a v-for="item in navigation.social" :key="item.name" :href="item.href" target="_blank" class="text-gray-400 hover:text-gray-500">
           <span class="sr-only">{{ item.name }}</span>
           <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
         </a>
       </div>
-      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+      <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 <a href="https://migfus.net" target="_blank" class="decoration:underline">Migfus.net</a> All rights reserved.</p>
     </div>
   </footer>
 </template>
