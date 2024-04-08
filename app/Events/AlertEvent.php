@@ -14,12 +14,14 @@ class AlertEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $content;
+
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct($content)
     {
-        //
+      $this->content = $content;
     }
 
     /**

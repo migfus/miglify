@@ -4,6 +4,7 @@ import { createApp, h, DefineComponent } from 'vue'
 import { createInertiaApp, Link } from '@inertiajs/vue3'
 import Layout from './Layout/BaseLayout.vue'
 
+
 createInertiaApp({
   resolve: name => {
     const pages = import.meta.glob<DefineComponent>('./Pages/**/*.vue', { eager: true })

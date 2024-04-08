@@ -68,6 +68,7 @@ const activityItems = [
         </li>
 
       </DataTransition>
+
       <div class="flex flex-col">
         <AppButton :icon="PlusIcon">More</AppButton>
       </div>
